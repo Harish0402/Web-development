@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://w7.pngwing.com/pngs/709/627/png-transparent-google-docs-form-google-purple-violet-text-thumbnail.png" type="image/x-icon">
+    <title>Form</title>
+
+    <style>
+        td{
+            padding-right: 10px;
+        }
+
+        table{
+            padding: 10px;
+            background-color:lightgreen;
+        }
+
+        th,td{
+            padding: 10px;
+        }
+
+        .skill{
+            align-content:center;
+        }
+
+        caption{
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    
+    <table>
+<form onsubmit="handlesubmit(event)">
+    <tr>
+        <!--Name part-->
+
+        <th><label for="first-name">First Name :</label></th>
+        <td><input type="text" name="first-name" required></td>
+
+        <th><label for="last-name">Last Name :</label></th>
+        <td><input type="text" name="last-name" required></td >
+    </tr>
+    <tr>
+        <!--DOB-->
+
+        <th><label for="dob">DOB :</label></th>
+        <!--<td><input type="number" name="dob"></td>
+        <td><input type="month" name="dob"></td>
+        <td><input type="year" name="dob"></td>-->
+        <td><input type="date" name="dob" required></td>
+    </tr>
+
+    <tr>
+        <!--Gender part-->
+
+        <th><label for="Gender">Gender :</label></th>
+
+        <td><input type="radio" id="male" name="Gender">
+            <label for="male">Male</label></td>
+
+        <td><input type="radio" id="female" name="Gender">
+            <label for="female">Female</label></td >
+    </tr>
+
+    <tr>
+        <!--Email part-->
+
+        <th><label for="email">E-mail :</label></th>
+        <td><input type="email" name="email"></td>
+
+    </tr>
+
+    <tr>
+        <!--Mobile No-->
+
+        <th><label for="tele">Mobile Number :</label></th>
+        <td><input type="tel" name="tele" required></td >
+    </tr>
+
+    <!--Skills part-->
+
+    <tr>
+    
+        <th><label for="skills" required>Skills :</label></th>
+        <td><input type="checkbox" id="sd" name="skills">
+        <label for="sd">Software Development</label></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="skill"><input type="checkbox" id="fsd" name="skills">
+            <label for="fsd">FSD</label></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="checkbox" id="st" name="skills">
+            <label for="st">Software Testing</label></td>
+    </tr>
+
+    <tr>
+        <th><label for="resume">Uplaod Resume : </label></th>
+        <td><input type="file" name="resume" required></td>
+    </tr>
+
+    <tr>
+        <th><label for="salary">Expected Salary :</label></th>
+        <td>
+            <input type="range" name="salary" onInput="this.form.out.value=this.value" value="0" min="0" max="35000">
+            <output name="out" value="0">0</output>
+        </td>
+    </tr>
+
+    <tr>
+        <th><label for="choice">Role of appliying :</label></th>
+        <td>
+            <select name="choice" id="role">
+                <option value="none" disabled selected>Select One</option>
+                <option value="webdev">Web Developer</option>
+                <option value="softdev">Software Developer</option>
+                <option value="data">Database Administrator</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Description :</th>
+        <td><textarea name="desc" id="desc" minlength="10" maxlength="300" rows="5"cols="20" placeholder="Write about yourself"></textarea></td>
+    </tr>
+
+
+    <!--Reset and Submit part-->
+
+    <tr>
+        <td></td>
+        <th><input type="reset" value="Reset"></th>
+        <th><input  type="submit" value="Submit"></th>
+        
+    </tr>
+</form>
+    </table>
+
+
+</body>
+</html>
